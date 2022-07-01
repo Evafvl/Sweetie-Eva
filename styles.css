@@ -1,18 +1,4 @@
-/*
-1.posicionamiento
-2. Modelo de caja (box model)
-3. Tipografía
-4. Visuales
-5. Otros
-*/
-
 :root {
-  /*colores*/
-  --bitcoin-orange: #F7931A;
-  --soft-orange:#FFE9D5;
-  --secundari-blue: #1A9AF7;
-  --soft-blue: #E7F5FF;
-
   /*Colores*/
   --sweetie-purpleH: #4b1c71;
   --sweetie-purple: #7f4ca5;
