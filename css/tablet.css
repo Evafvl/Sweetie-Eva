@@ -1,0 +1,17 @@
+header img {
+  width: 180px;
+  height: 180px;}
+.main-tables-container{
+  display: flex;
+  width: 830px;
+  margin: 0 auto;
+}
+.product-cards--container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 830px;
+  margin: 0 auto;
+}
+.plans-container--slider {
+  justify-content: center;
+}

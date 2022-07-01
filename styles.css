@@ -1,0 +1,467 @@
+/*
+1.posicionamiento
+2. Modelo de caja (box model)
+3. Tipografía
+4. Visuales
+5. Otros
+*/
+
+:root {
+  /*colores*/
+  --bitcoin-orange: #F7931A;
+  --soft-orange:#FFE9D5;
+  --secundari-blue: #1A9AF7;
+  --soft-blue: #E7F5FF;
+
+  /*Colores*/
+  --sweetie-purpleH: #4b1c71;
+  --sweetie-purple: #7f4ca5;
+  --just-purple: #b57edc;
+  --soft-purple: #dbb6ee;
+  --lilac:#fff0ff;
+  --warm-black: #201E1C;
+  --black: #282623;
+  --grey:#BABABA;
+  --off-white:#FAF8F7;
+  --just-white:#fff;
+
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family:sans-serif ;
+}
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-width: 320px;
+  height: 334px;
+  text-align: center;
+  background: linear-gradient(207.8deg, #794c95 16.69%, #ddc6f4 100%);
+}
+header img {
+  width: 120px;
+  height: 120px;
+  margin-top:20px ;
+  align-self: center ;
+}
+.header-title-container {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  height: 218px;
+  margin-top: 20px;
+  text-align: center;
+  align-self: center;
+}
+.header-title-container h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--just-white);
+}
+.header-title-container p {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--lilac);
+  padding-bottom: 75px;
+} 
+.header-title-container .header--button {
+  position: absolute;
+  left: calc(50% - 118px);
+  top: 270px;
+  display: block;
+  margin-top:35px;
+  padding: 15px;
+  width: 229px;
+  height: 48px;
+  background-color: var(--off-white);
+  /*sombra*/
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, .16);
+  border: none;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--black);
+}
+.header--button span {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background-image: url('./assets/icons/down-arrow.svg');
+}
+main {
+  width: 100%;
+  height: auto;
+  background-color: var(--off-white);
+  min-width: 320px;
+}
+.main-exchange-container {
+  width: 100%;
+  height: auto;
+  padding-top: 80px ;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.main-exchange-container--title {
+  width: 100%;
+  min-width: 288px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.main-exchange-container .backgroundImg {
+  width: 288px;
+  height: 288px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background-image: url(./assets/img/pastelCH\ plimplim.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main-exchange-container h2 {
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+  font-weight:bold ;
+  line-height: 2.6rem;
+  color: var(--black);
+}
+.main-exchange-container p {
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #757575;
+}
+.main-tables-container {
+  justify-items: center;
+  margin: auto;
+ /* display: flex;
+  height: 360px;
+  overflow-x: scroll;
+  overscroll-behavior-x:contain;
+  scroll-snap-type-x: proximity;*/
+
+}
+
+
+.main-price-table, .main-wedding-table {
+  position: relative;
+  scroll-snap-align: center;
+  width: 70%;
+  min-width: 235px;
+  max-width: 500px;
+  height: 360px;
+  margin: 0 10px;
+  padding: 0 35px;
+}
+.main-price-table .price-table--title, 
+.main-wedding-table .wedding-table--title{
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.3rem;
+  color: var(--sweetie-purple);
+}
+.main-wedding-table .wedding-table--title {
+  color: #757575;
+}
+.price-table--container, .wedding-table--container {
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+.price-table--container table, .wedding-table--container table {
+  width: 100%;
+  height: 100%;
+}
+
+.price-table--container td, .wedding-table--container td {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  color: var(--grey);
+  background-color: var(--just-white);
+}
+.price-table--container .table__top-left, .wedding-table--container .table__top-left {
+  border-radius: 15px 0 0;
+}
+.price-table--container .table__top-right, .wedding-table--container .table__top-right {
+  border-radius: 0 15px 0 0;
+}
+.price-table--container .table__bottom-right, .wedding-table--container .table__bottom-right {
+  border-radius: 0 0 15px;
+}
+.price-table--container .table__bottom-left, .wedding-table--container .table__bottom-left {
+  border-radius: 0 0 0 15px;
+}
+.price-table--container table__right, .wedding-table--container table__right {
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.7rem;
+  color: #757575;
+}
+
+.price-table--date, .wedding-table--date {
+  width: 190px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 8px;
+  background-color: var(--soft-purple);
+  border-radius: 8px;
+}
+.wedding-table--date {
+  background-color: var(--lilac);
+}
+.price-table--date p, .wedding-table--date p {
+  font-size: 1.2rem;
+  line-height:1.4rem ;
+  font-weight: 300;
+  color: var(--warm-black);
+}
+.main-product-detail {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 10px;
+  background-color: #493f65;
+}
+.product-detail--batata-logo {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -30px;
+  left: calc(50% - 30px);
+  background-image: url("./assets/icons/isotipopasteleria.png");
+  background-repeat: no-repeat;
+}
+.product-detail--title {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+.product-detail--title h2 {
+  margin-bottom: 20px ;
+  font-size: 2.4rem;
+  color: var(--just-white);
+  font-weight: bold;
+  line-height: 2.6rem;
+}
+.product-detail--title p {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--off-white);
+}
+.product-detail--card {
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  min-height: 150px;
+  margin: 15px auto;
+  padding: 15px;
+  background: linear-gradient(to bottom, #ae7bce, #ddc6f4); ;
+  border-radius: 5px;
+  box-shadow: rgba(239, 231, 231, 0.1) 0px 1px 1px 0px inset, rgba(236, 236, 239, 0.109) 0px 50px 100px -20px, rgba(248, 247, 247, 0.144) 0px 30px 60px -30px;
+}
+.product-detail--card .clock {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  background-image: url("./assets/icons/iconotiempo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product--card-title {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: var(--just-white);
+}
+.product--card-body {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #626262;
+}
+.product-detail--card .delivery {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 10px;
+  background-image: url("./assets/icons/iconodelivery.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-detail--card .quality {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  background-image: url("./assets/icons/iconoquality.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-detail--card .process {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  background-image: url("./assets/icons/iconoprocess.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.weddingcake-img-container {
+  width: 100%;
+  min-width: 320px;
+  height: 60vh;
+  background-image: url("./assets/img/Pastelblueberry2.jpg") ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  opacity: 0.8;
+}
+.weddingcake-img-container h2 {
+  color:#5b425b;
+  padding-top: 260px;
+  font-size: 3.4rem;
+  font-weight: bold;
+  line-height: 2.0rem;
+}
+.main-plans-container {
+  width: 100%;
+  min-width: 320px;
+  padding-bottom: 70px;
+  text-align: center;}
+.plans--title {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}  
+.plans--title h2 {
+  padding-top: 50px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--black);
+}
+.plans--title p {
+  padding-top: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #757575;
+}
+.plans-container--slider {
+  display: flex;
+  height: 316px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type:x proximity;
+} 
+.plans-container--card {
+  position: relative;
+  scroll-snap-align: center;
+  width: 70% ;
+  min-width: 190px;
+  max-width: 250px ;
+  height: 250px;
+  margin: 50px 5px 0;
+  padding: 0 15px;
+  background-color: var(--just-white);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(89,73,30,0.16);
+}
+.plans-container--card img {
+  width: 140px;
+  height: 130px;
+
+}
+.recomendado{
+  position: absolute;
+  width: 120px;
+  height: 31px; 
+  left: calc(50% - 60px);
+  top: -15px;
+  font-size: 1.2rem;
+  background-color: var(--sweetie-purple);
+  border-radius: 8px;
+  color: var(--just-white);
+  padding: 8px;
+ }
+ .plan-card--title {
+   padding-top: 30px;
+   font-size: 1.4rem;
+   /*font-weight: 500;*/
+   line-height: 1.8rem;
+   color: black;
+ }
+ .plan-card--price {
+   padding: 5px 0;
+   font-size: 5.2rem;
+   font-weight: bold;
+   color: var(--black);
+ }
+ .plan-card--saving {
+   font-size: 1.2rem;
+   color: #757575;
+ }
+footer {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  background-color: var(--soft-purple);
+}
+footer section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+footer .left ul {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  list-style: none;
+}
+.left li {
+  margin: 10px 0;
+}
+.left a {
+  text-decoration: none;
+  color: var(--just-white);
+}
+.right img {
+  width: 100px;
+  height: 100px;
+}
